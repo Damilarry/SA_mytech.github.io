@@ -32,7 +32,7 @@ These insights reflect Amazon UK's strategic approach to Black Friday, focusing 
 
 **Title:** Employee Data
 
-**SQL Code:** [Employee Data Sql Code]
+**SQL Code:** [Employee Data Sql Code](https://github.com/Damilarry/SA_mytech.github.io/blob/main/EmploeeData_Project1.Sql)
 
 **SQL Skills Used:** Data Retrieval (SELECT): Queried and extracted specific information from the database. Data Aggregation (SUM, COUNT): Calculated totals, such as sales and quantities, and counted records to analyze data trends. Data Filtering (WHERE, BETWEEN, IN, AND): Applied filters to select relevant data, including filtering by ranges and lists. Data Source Specification (FROM): Specified the tables used as data sources for retrieval.
 
