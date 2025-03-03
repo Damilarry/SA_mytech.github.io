@@ -1,0 +1,146 @@
+---How many incidents occurred at each plant?
+
+SELECT [Plant], COUNT([Incident Type]) AS IncidentCount
+FROM [dbo].['Safety Data$']
+GROUP BY [Plant]
+ORDER BY [Plant]
+
+----What is the total incident cost per department?
+
+SELECT [Department],
+       sum([Incident Cost]) OVER() AS Total_Cost
+FROM [dbo].['Safety Data$']
+ORDER BY Total_Cost DESC
+
+----Which incident type resulted in the highest total days lost?
+
+SELECT [Incident Type], 
+      SUM([Days Lost]) AS TotalDaysLost
+FROM [dbo].['Safety Data$']
+GROUP BY [Incident Type]
+ORDER BY TotalDaysLost DESC
+
+----What is the distribution of incident types by shift?
+
+SELECT [Incident Type], [Shift], COUNT(*) AS IncidentCount
+FROM [dbo].['Safety Data$']
+GROUP BY [Incident Type],[Shift] 
+ORDER BY [Incident Type], [Shift]
+
+----What is the average incident cost for each injury location?
+
+SELECT [Injury Location],
+       AVG([Incident Cost]) OVER() AS AvgCost
+FROM [dbo].['Safety Data$']
+ORDER BY AvgCost 
+
+----Which age group has the highest number of incidents?
+
+SELECT [Incident Type], [Age Group], COUNT(*) AS IncidentCount
+FROM [dbo].['Safety Data$']
+GROUP BY [Incident Type], [Age Group]
+ORDER BY IncidentCount DESC, [Age Group] DESC
+
+----How many incidents were reported as 'Lost Time' by each plant?
+
+SELECT [Report Type], [Days Lost], COUNT(*) AS LostCount
+FROM [dbo].['Safety Data$']
+GROUP BY [Report Type], [Days Lost]
+ORDER BY [Report Type], [Days Lost]
+
+----Which department had the highest number of 'Crush & Pinch' incidents?
+
+SELECT [Department], COUNT(*) AS IncidentCount
+FROM [dbo].['Safety Data$']
+WHERE [Incident Type] = 'Crush & Pinch'
+GROUP BY [Department]
+ORDER BY IncidentCount DESC
+
+----Which plants reported the most "Near Miss" incidents?
+
+SELECT [Plant], COUNT(*) AS Miss_Count
+FROM [dbo].['Safety Data$']
+WHERE [Report Type] = 'Near Miss'
+GROUP BY [Plant]
+
+----What is the total number of incidents by year and month?
+
+SELECT [Year], [Month],
+      SUM([Incident Cost]) AS Total_Incident
+FROM [dbo].['Safety Data$']
+GROUP BY [Year], [Month]
+ORDER BY [Month], Total_Incident DESC
+
+----Which gender has the most reported incidents?
+
+SELECT [Gender], [Incident Type], COUNT(*) AS IncidentCount
+FROM [dbo].['Safety Data$']
+GROUP BY [Gender], [Incident Type]
+ORDER BY [Gender] DESC, IncidentCount DESC
+
+----What is the total cost of incidents per year?
+
+SELECT [Year], 
+      SUM([Incident Cost]) AS Total_Incident
+FROM [dbo].['Safety Data$']
+GROUP BY [Year]
+ORDER BY Total_Incident DESC
+
+
+----Which incident resulted in the highest cost?
+
+SELECT TOP 1 *
+FROM [dbo].['Safety Data$']
+ORDER BY [Incident Cost] DESC
+
+----What is the total cost of incidents for each report type?
+
+SELECT [Incident Type], [Report Type],
+       SUM([Incident Cost]) AS TotalCost
+FROM [dbo].['Safety Data$']
+GROUP BY  [Incident Type],[Report Type]
+ORDER BY [Incident Type], TotalCost DESC
+
+----Which departments had incidents with more than 2 days lost?
+
+SELECT  [Department]
+FROM [dbo].['Safety Data$']
+WHERE  [Days Lost] > 2
+
+----What is the average number of days lost per incident type?
+
+SELECT [Incident Type],
+      AVG([Days Lost]) AS AVG_Lost
+FROM [dbo].['Safety Data$']
+GROUP BY [Incident Type]
+
+----What is the distribution of incidents by shift (Day, Afternoon, Night)?
+
+SELECT [Incident Type], [Shift]
+FROM [dbo].['Safety Data$']
+GROUP BY [Incident Type],[Shift] 
+
+----Which months have the highest number of incidents?
+
+SELECT TOP 1 *,
+       [Incident Cost]
+       [Month]
+FROM [dbo].['Safety Data$']
+ORDER BY [Incident Cost] DESC
+
+----What is the total cost of "Vehicle" related incidents?
+
+SELECT [Incident Type],
+       SUM([Incident Cost]) AS TotalCost
+FROM [dbo].['Safety Data$']
+where [Incident Type] = 'Vehicle'
+GROUP BY [Incident Type]
+
+----Which age group is most affected by "Falling Object" incidents?
+ 
+ SELECT [Incident Type], COUNT(*) [Age Group],
+        SUM([Incident Cost]) AS TotalCost
+ FROM [dbo].['Safety Data$']
+ WHERE [Incident Type] = 'Falling Object'
+ GROUP BY [Age Group], [Incident Type]
+ ORDER BY [Age Group] DESC
