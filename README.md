@@ -213,6 +213,6 @@ Objectives:
 
 **Dashboard Overview:**
 
-![Players Metrics Dashboard](PlayersMetricsDashboard.png0
+![Players Metrics Dashboard](PlayersMetricsDashboard.png)
 
 
