@@ -1,0 +1,210 @@
+--Write a query to find all the players in the "Arizona" team.
+
+SELECT [Name]
+FROM [dbo].[Sheet1$]
+WHERE [Team ] = 'Arizona'
+
+--Write a query to find all the players who play as a "WR" (Wide Receiver).
+
+SELECT [Name]
+FROM [dbo].[Sheet1$]
+WHERE [Position] = 'WR'
+
+--Write a query to list all players taller than 6 feet 2 inches.
+
+SELECT *
+FROM [dbo].[Sheet1$]
+WHERE TRY_CAST(SUBSTRING([Height], 1, CHARINDEX('-', [Height]) - 1) AS INT) * 12 + 
+      TRY_CAST(SUBSTRING([Height], CHARINDEX('-', [Height]) + 1, LEN([Height])) AS INT) > (6 * 12 + 2)
+
+SELECT [Team ],[Height],
+        MAX([Inches]) OVER(PARTITION BY[Height] ) AS MAXINCHES
+FROM [dbo].[Sheet1$]
+WHERE [Inches] > 75
+ORDER BY MAXINCHES
+
+--Write a query to find all players who attended the "Washington" college.
+
+SELECT *
+FROM [dbo].[Sheet1$]
+WHERE [College] = 'Washington'
+
+--Write a query to list players who are 25 years old or younger.
+
+SELECT *
+FROM  [dbo].[Sheet1$]
+WHERE TRY_CAST([Age] AS INT) <= 25
+
+--Write a query to find all players with missing Age data.
+
+SELECT *
+FROM [dbo].[Sheet1$]
+WHERE [Age] = 'N/A'
+
+SELECT * 
+FROM  [dbo].[Sheet1$]
+WHERE TRY_CAST([Age] AS INT) IS NULL
+
+--Write a query to find players who are rookies (Exp = 'R').
+
+SELECT *
+FROM [dbo].[Sheet1$]
+WHERE [Experience] = 'R'
+
+--Write a query to find the tallest player on the "New Orleans" team.
+
+SELECT * 
+FROM [dbo].[Sheet1$]
+WHERE [Team ] = 'New Orleans' 
+ORDER BY [Height] DESC 
+
+--Write a query to find players weighing more than 250 pounds.
+
+SELECT *
+FROM [dbo].[Sheet1$]
+WHERE [Weight ] >250
+ORDER BY [Weight ] ASC
+
+--Write a query to calculate the average height of players at each position.
+
+SELECT [Position], [Team ],
+       AVG(
+           (CAST(LEFT(Height, CHARINDEX('-', Height) - 1) AS INT) * 12) + 
+           CAST(RIGHT(Height, LEN(Height) - CHARINDEX('-', Height)) AS INT)
+       ) AS Avg_Height_Inches
+FROM [dbo].[Sheet1$]
+WHERE Height LIKE '%-%'  -- Ensures valid height format
+GROUP BY [Position], [Team ]
+ORDER BY [Position], Avg_Height_Inches DESC
+
+--Write a query to find the heaviest player for each position.
+
+SELECT * 
+FROM (
+    SELECT [Position], [Name], [Weight ], 
+           RANK() OVER (PARTITION BY [Position] ORDER BY TRY_CAST([Weight ] AS INT) DESC) AS WT_Rank
+    FROM [dbo].[Sheet1$]
+    WHERE TRY_CAST([Weight ] AS INT) IS NOT NULL
+) AS Ranked_Name
+WHERE WT_Rank = 1
+
+--Write a query to rank players by age within their team. If two players have the same age, rank them by their weight.
+
+SELECT [Team ], [Name], [Age], [Weight ],
+       RANK() OVER (PARTITION BY [Team] ORDER BY TRY_CAST([Age] AS INT) ASC, TRY_CAST([Weight ] AS INT) DESC) AS Rank_Age
+FROM [dbo].[Sheet1$]
+WHERE TRY_CAST([Age] AS INT) IS NOT NULL
+
+--Write a query to calculate the average height (in inches) for all players older than 25 years.
+
+SELECT AVG(
+           (CAST(LEFT([Height], CHARINDEX('-', [Height]) - 1) AS INT) * 12) + 
+           CAST(RIGHT([Height], LEN([Height]) - CHARINDEX('-', [Height])) AS INT)
+       ) AS Avg_Height_Inches
+FROM [dbo].[Sheet1$]
+WHERE TRY_CAST([Age] AS INT) > 25 
+      AND [Height] LIKE '%-%'
+
+--Write a query to find all players whose height is greater than the average height of their respective team.
+
+SELECT [Name], [Team ], [Height]
+FROM [dbo].[Sheet1$] AS p
+WHERE TRY_CAST(Height AS FLOAT) > 
+      (SELECT AVG(TRY_CAST(Height AS FLOAT)) 
+       FROM [dbo].[Sheet1$] AS t 
+       WHERE t.[Team ] = p.[Team ])
+ORDER BY [Team ], [Height] DESC
+
+--Write a query to find all players who share the same last name.
+
+SELECT [LastN], [FirstN], [Team ], [Height]
+FROM [dbo].[Sheet1$]
+WHERE  [LastN] IN (
+    SELECT [LastN]
+    FROM [dbo].[Sheet1$]
+    GROUP BY [LastN]
+    HAVING COUNT(*) > 1
+)
+ORDER BY [LastN], [FirstN]
+
+--Write a query to find the players with the minimum height for each position.
+
+SELECT p.Position, p.[Name], p.[Team ], p.Height
+FROM [dbo].[Sheet1$] AS p
+WHERE TRY_CAST(p.Height AS FLOAT) = 
+      (SELECT MIN(TRY_CAST(Height AS FLOAT))
+       FROM [dbo].[Sheet1$] AS t
+       WHERE t.Position = p.Position)
+ORDER BY p.Position, p.Height
+
+
+--Write a query to get the number of players for each team grouped by their experience level.
+
+SELECT 
+    [Team ], 
+    [Experience], 
+    COUNT(*) AS PlayerCount
+FROM [dbo].[Sheet1$]
+GROUP BY [Team ], [Experience]
+ORDER BY [Team ], [Experience]
+
+--Write a query to find the tallest and shortest players from each college.
+
+WITH TallestShortest AS (
+    SELECT 
+        [College], 
+        MAX(TRY_CAST([Height] AS FLOAT)) AS TallestHeight,
+        MIN(TRY_CAST([Height] AS FLOAT)) AS ShortestHeight
+    FROM [dbo].[Sheet1$]
+    GROUP BY [College]
+)
+SELECT 
+    P.[College], 
+    P.[Name], 
+    P.[Height]
+FROM [dbo].[Sheet1$] P
+JOIN TallestShortest TS
+    ON P.[College] = TS.[College]
+    AND (TRY_CAST(P.[Height] AS FLOAT) = TS.TallestHeight OR TRY_CAST(P.[Height] AS FLOAT) = TS.ShortestHeight)
+ORDER BY P.[College], P.[Height] DESC
+
+--Write a query to find all players whose weight is above the average weight for their respective position.
+
+SELECT 
+    P.[Position], 
+    P.[Name], 
+    P.[Weight]
+FROM [dbo].[Sheet1$] P
+WHERE TRY_CAST(P.[Weight] AS FLOAT) > (
+    SELECT AVG(TRY_CAST([Weight] AS FLOAT))
+    FROM [dbo].[Sheet1$]
+    WHERE [Position] = P.[Position]
+)
+ORDER BY P.[Position], P.[Weight] DESC
+
+--Write a query to calculate the percentage of players in each position for every team.
+
+WITH TeamPositionCounts AS (
+    SELECT 
+        [Team ], 
+        [Position], 
+        COUNT(*) AS PositionCount
+    FROM [dbo].[Sheet1$]
+    GROUP BY [Team ], [Position]
+),
+TeamTotalCounts AS (
+    SELECT 
+        [Team ], 
+        COUNT(*) AS TotalCount
+    FROM [dbo].[Sheet1$]
+    GROUP BY [Team ]
+)
+SELECT 
+    TPC.[Team ], 
+    TPC.[Position], 
+    TPC.PositionCount, 
+    (TPC.PositionCount * 100.0 / TTC.TotalCount) AS PositionPercentage
+FROM TeamPositionCounts TPC
+JOIN TeamTotalCounts TTC
+    ON TPC.[Team ] = TTC.[Team ]
+ORDER BY TPC.[Team ], TPC.[Position]
