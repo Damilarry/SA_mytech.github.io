@@ -164,7 +164,7 @@ Objectives:
 
 # Project 8
 
-**Title:** [Player Metrics Dashboard](https://github.com/Damilarry/SA_mytech.github.io/blob/main/Player_Metrics_Dashboard_BI.pbix)
+**Title:** [Player Metrics BI Dashboard](https://github.com/Damilarry/SA_mytech.github.io/blob/main/Player_Metrics_Dashboard_BI.pbix)
 
 **Tools Used:** Power BI Desktop, Power Query, DAX (Data Analysis Expressions), Power BI Service, Power BI Data Gateway, Power BI Mobile Apps, External Tools Integration- Tabular Editor, DAX Studio, Bravo for Power BI.
 
