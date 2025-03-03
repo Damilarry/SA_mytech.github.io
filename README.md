@@ -162,5 +162,57 @@ Objectives:
 
 ![Utility Response Metrics BI](Utility_Response_Metrics_BI.png)
 
+# Project 8
+
+**Title:** [Player Metrics Dashboard](https://github.com/Damilarry/SA_mytech.github.io/blob/main/Player_Metrics_Dashboard_BI.pbix)
+
+**Tools Used:** Power BI Desktop, Power Query, DAX (Data Analysis Expressions), Power BI Service, Power BI Data Gateway, Power BI Mobile Apps, External Tools Integration- Tabular Editor, DAX Studio, Bravo for Power BI.
+
+**Project Description:**  This project involves developing a Business Intelligence (BI) solution using Power BI to analyze and visualize football player metrics. The objective is to gain insights into player performance, team dynamics, and scoring patterns to inform strategic decisions.
+
+**Key findings:** 
+1. Total Players:The dataset includes 11,150 players across various teams and leagues.
+   
+2, Home and Away Games: Home Games: 5,591 games (50%), Away Games: 5,591  games (50%)
+
+3. Top 5 Goal Scorers:
+   •Ciro Immobile: 74 goals
+   •Wout  Weghorst: 71 goals
+   •Mauro Icardi: 58 goals
+   •Mason Moun: 56  goals
+   •Antoine Griezmann: 48 goals
+   
+4. Top 5 Players by Appearances:
+   •Zvonomir: 68 appearances
+   •Zlatko: 51 appearances
+   •Zora: 50 appearances
+   •Zoran: 44 appearances
+   •Zydrunas: 36 appearances
+
+5. Aerials Won by Players:
+   •Pontus: 26 aerials won
+   •Yussuf: 26 aerials won
+   •Anton: 24 aerials won
+   •Marcelo: 22 aerials won
+   •Raul: 22 aerials won
+
+6. Top Assist Providers:
+   •Mason: 20 assists
+   •Memphis: 18 assists
+   •Thomas: 15 assists
+   •Hakim: 12 assists
+   
+7. Top Performing Clubs:
+   •Atlético Madrid: 613 points
+   •RasenBallsport Leipzig: 75 points
+   •CSKA Moscow : 607 points
+   •Sporting CP: 571 points
+   •Arsena: 486 points
+   
+8. Player Scoring Patterns: Players tend to score more goals in the Evening ames, with an average of 34% goals per Evening game compared 32% goals per game in Morning and Afternoon.  These insights provide a comprehensive overview of player performances, team standings, and scoring behaviors, facilitating data-driven decisions to enhance team strategies and player development.
+
+**Dashboard Overview:**
+
+![Players Metrics Dashboard](PlayersMetricsDashboard.png0
 
 
