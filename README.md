@@ -98,8 +98,7 @@ To design a normalized database for storing employee-related information. To per
 
 **SQL Skills Used:** Data Retrieval (SELECT): Queried and extracted specific information from the database. Data Aggregation (SUM, COUNT): Calculated totals, such as sales and quantities, and counted records to analyze data trends. Data Filtering (WHERE, BETWEEN, IN, AND, OVER): Applied filters to select relevant data, including filtering by ranges and lists. Data Source Specification (FROM): Specified the tables used as data sources for retrieval.
 
-**Project Description:** This project involves developing a structured SQL database to manage and analyze safety-related data within an organization. The primary goal is to enhance workplace safety by identifying patterns and potential hazards through comprehensive data analysis.
-**Objectives:**
+**Project Description:** This project involves developing a structured SQL database to manage and analyze safety-related data within an organization. The primary goal is to enhance workplace safety by identifying patterns and potential hazards through comprehensive data analysis. Objectives are:
 1.Database Design and Implementation: Develop a relational database schema to store safety data, including incident reports, employee details, safety inspections, and training records. Ensure data integrity and consistency through appropriate constraints and relationships.
 
 2. Data Collection and Integration: Aggregate historical safety data from various sources into the SQL database. Implement automated data entry processes for real-time incident reporting and tracking.
