@@ -84,6 +84,28 @@ These insights underscore JD Sports' robust performance across various regions a
 
 ![JD_Sport](JD_Sport.png)
 
+# Project 4
+
+**Title:** Football Players Data
+
+**SQL Code:**[Football Players Sql Code](https://github.com/Damilarry/SA_mytech.github.io/blob/main/Football_Players_Data_Sql)
+
+**SQL Skills Used:** Data Retrieval (SELECT): Queried and extracted specific information from the database. Data Aggregation (SUM, COUNT): Calculated totals, such as sales and quantities, and counted records to analyze data trends. Data Filtering (WHERE, BETWEEN, IN, AND, TRY_CAST, RANK): Applied filters to select relevant data, including filtering by ranges and lists. Data Source Specification (FROM): Specified the tables used as data sources for retrieval
+
+**Project Description:** This project focuses on the analysis of a comprehensive dataset containing detailed information about approximately 11,000 football players. 
+The primary objective is to utilize SQL for extracting meaningful insights regarding player demographics, performance metrics, and other relevant attributes.
+
+1. Database Design and Implementation: Develop a relational database schema to effectively store and manage the football players' data, ensuring normalization and referential integrity.
+
+2. Data Analysis Using SQL: Execute SQL queries to analyze various aspects of the dataset, including: Player demographics (e.g., age, nationality). Performance metrics (e.g., ratings, positions). Financial attributes (e.g., wages, market value).
+
+3. Insight Extraction: Identify patterns and trends within the data, such as: Nationalities with the highest representation among players. Correlation between player attributes and performance metrics. Distribution of players across different clubs and leagues.
+
+4. Reporting and Visualization: Present the findings through comprehensive reports and visualizations to facilitate better understanding and decision-making.
+
+**Objectives:** By the end of this project, we aim to have a fully functional SQL database capable of providing in-depth analysis of football players' data, offering valuable insights for stakeholders such as team managers, scouts, and analysts.
+
+**Technology used:** SQL server
 
 
 
