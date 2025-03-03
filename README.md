@@ -15,7 +15,7 @@ Amazon UK experienced its largest sales volume to date during the Black Friday W
 •	Amazon's Performance: Amazon reported record sales during Black Friday Week and other retails, reflecting robust consumer engagement and successful promotional strategies.
 
 3. Retail and Brand Performance
-•	Discounts and Savings: UK shoppers enjoyed average savings of 30% across Amazon UK during Black Friday, highlighting the effectiveness of promotional campaigns.
+•Discounts and Savings: UK shoppers enjoyed average savings of 30% across Amazon UK during Black Friday, highlighting the effectiveness of promotional campaigns.
 
 4. Total Sales Relative to Targets
 Despite economic challenges, projections indicated a 34% rise in sales, reaching billion from Black Friday. However, online spending exceeded expectations compares to previous year. These insights reflect Amazon UK's strategic approach to Black Friday, focusing on substantial discounts, effective promotional campaigns, and robust online sales performance, all contributing to record-breaking sales during the period.
