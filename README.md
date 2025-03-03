@@ -1,6 +1,6 @@
 # Project 1
 
-**Title:** [Amazon UK Black Friday Interactive Dashboard](https://github.com/Damilarry/SA_mytech.github.io/blob/main/Amazon%20UK%20Dashboard.xlsx)
+**Title:** [Amazon Black Friday Interactive Dashboard](https://github.com/Damilarry/SA_mytech.github.io/blob/main/Amazon%20UK%20Dashboard.xlsx)
 
 **Tools Used:**  Chart Types & Insertion, Chart Design & Formatting, Data Analysis Tools, Advanced Visualization Tools, Interactive Features
 
@@ -28,7 +28,18 @@ These insights reflect Amazon UK's strategic approach to Black Friday, focusing 
 
 ![AmazonBF](AmazonBF.png)
 
-# Project 2
+
+#Project 2
+Title: [JD Sport Interactive Dashboard]
+Tools Used:
+Project Description:
+Key findings:
+Dashboard Overview:
+
+
+
+
+# Project 3
 
 **Title:** Employee Data
 
