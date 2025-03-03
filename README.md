@@ -4,13 +4,7 @@
 
 **Tools Used:**  Chart Types & Insertion, Chart Design & Formatting, Data Analysis Tools, Advanced Visualization Tools, Interactive Features
 
-**Project Description:** An interactive Excel dashboard analyzing Amazon UK Black Friday sales trends, customer behavior, and product performance. Features include:
-•	Sales Insights: Revenue trends, top-selling categories, and product performance.
-•	Customer Analysis: Purchase patterns, demographics, and spending behavior.
-•	Discount Impact: Correlation between discounts and sales volume.
-•	Real-Time Trends: Hourly and daily sales performance visualization.
-Built using Excel's advanced data analysis and visualization tools, this dashboard provides data-driven insights for optimizing Black Friday sales strategies.
-
+**Project Description:** An interactive Excel dashboard analyzing Amazon UK Black Friday sales trends, customer behavior, and product performance. Features include: •	Sales Insights: Revenue trends, top-selling categories, and product performance. •	Customer Analysis: Purchase patterns, demographics, and spending behavior. •	Discount Impact: Correlation between discounts and sales volume. •	Real-Time Trends: Hourly and daily sales performance visualization. Built using Excel's advanced data analysis and visualization tools, this dashboard provides data-driven insights for optimizing Black Friday sales strategies.
 
 **Key findings:** Based on the analysis of Amazon UK's Black Friday performance, here are the key findings:
 1. Record-Breaking Sales During Black Friday Week
@@ -21,25 +15,13 @@ Amazon UK experienced its largest sales volume to date during the Black Friday W
 3. Retail and Brand Performance
 •	Discounts and Savings: UK shoppers enjoyed average savings of 30% across Amazon UK during Black Friday, highlighting the effectiveness of promotional campaigns. 
 4. Total Sales Relative to Targets
-Despite economic challenges, projections indicated a 34% rise in sales, reaching billion from Black Friday. However, online spending exceeded expectations compares to previous year.
-These insights reflect Amazon UK's strategic approach to Black Friday, focusing on substantial discounts, effective promotional campaigns, and robust online sales performance, all contributing to record-breaking sales during the period.
+Despite economic challenges, projections indicated a 34% rise in sales, reaching billion from Black Friday. However, online spending exceeded expectations compares to previous year. These insights reflect Amazon UK's strategic approach to Black Friday, focusing on substantial discounts, effective promotional campaigns, and robust online sales performance, all contributing to record-breaking sales during the period.
 
 **Dashboard Overview:**
 
 ![AmazonBF](AmazonBF.png)
 
-
-#Project 2
-Title: [JD Sport Interactive Dashboard]
-Tools Used:
-Project Description:
-Key findings:
-Dashboard Overview:
-
-
-
-
-# Project 3
+# Project 2
 
 **Title:** Employee Data
 
@@ -53,6 +35,42 @@ Dashboard Overview:
 
 **Technology used:** SQL server
 
+# Project 3
+
+**Title:** [JD Sport Interactive Sales Dashboard](https://github.com/Damilarry/SA_mytech.github.io/blob/main/JD%20Sports-Dashboard.xlsx)
+
+**Tools Used:** Chart Types & Insertion, Chart Design & Formatting, Data Analysis Tools, Advanced Visualization Tools, Interactive Features
+
+**Project Description:** This project entails developing an interactive Excel dashboard to analyze and visualize JD Sports' sales performance across various dimensions. The key components of the dashboard include:
+1.	Sales by Region: A breakdown of sales figures across different geographical regions, highlighting top-performing areas and identifying regions with growth potential.
+2.	Sales Method by Profit Margin: Analysis of various sales channels (e.g., online, in-store) to determine their respective profit margins, aiding in strategic decision-making regarding channel optimization.
+3.	Retail Performance Based on Units Sold: Evaluation of retail outlets based on the number of units sold, identifying high-performing stores and those requiring attention.
+4.	Retailer Performance by Total Sales: Assessment of each retailer's contribution to total sales, facilitating performance benchmarking and partnership evaluations.
+5.	Top-Performing Products by Units Sold: Identification of best-selling products, enabling inventory optimization and targeted marketing strategies.
+6.	Country & City Performance Based on Units Sold: Detailed analysis of sales performance at the country and city levels, uncovering local market trends and opportunities for expansion. This dashboard leverages Excel's data analysis and visualization capabilities to provide JD Sports with actionable insights, supporting informed decision-making and strategic planning.
+
+**Key findings:** Based on the analysis of JD Sports' sales performance, here are the key findings across various dimensions:
+1. Sales by Region
+•	Northwest: Northwest emerged as JD Sports' largest revenue-generating region, accounting for 21% of total sales. This growth was bolstered by strategic acquisitions and organic expansion in the U.K. market. 
+•	London: The London market experienced a 20% year-on-year revenue increase, reaching £3.09 billion in the financial year ending 2024. 
+•	Southeast: Revenue in Southeast region grew by 19% year-on-year.
+•	
+•	2. Sales Method by Profit Margin
+•	Retail Stores: Revenue from physical retail stores increased by 36% year-on-year. 
+•	Online Channel: Online sales experienced a 36% decrease, reflecting a consumer shift back to in-store shopping post-pandemic. 
+3. Retail Performance Based on Units Sold
+With exact figures on units sold per retail outlet are provided, the increase in retail store revenue is majorly from Lacoste and North Face suggests a positive trend in in-store sales performance.
+4. Retailer Performance by Total Sales
+JD Sports' total revenue reached £10.4 billion in FY2024, marking a 2.7% increase from the previous year. 
+5. Top-Performing Products by Units Sold
+•	Footwear: This segment saw an 15% revenue growth, totalling £19.5 billion in FY2024, indicating strong consumer demand. 
+6. Country & City Performance Based on Units Sold
+Detailed data on sales performance by England, Scotland Wale, Northern Ireland.
+These insights underscore JD Sports' robust performance across various regions and product categories, with notable growth in the London market and the footwear segment.
+
+**Dashboard Overview:**
+
+![JD_Sport](JD_Sport.png)
 
 
 
