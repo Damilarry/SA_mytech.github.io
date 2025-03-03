@@ -160,7 +160,7 @@ Objectives:
 
 **Dashboard Overview:**
 
-[Utility Response Metrics BI](Utility_Response_Metrics_BI.png)
+![Utility Response Metrics BI](Utility_Response_Metrics_BI.png)
 
 
 
