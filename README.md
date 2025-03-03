@@ -173,7 +173,7 @@ Objectives:
 **Key findings:** 
 1. Total Players:The dataset includes 11,150 players across various teams and leagues.
    
-2, Home and Away Games: Home Games: 5,591 games (50%), Away Games: 5,591  games (50%)
+2. Home and Away Games: Home Games: 5,591 games (50%), Away Games: 5,591  games (50%)
 
 3. Top 5 Goal Scorers:
    •Ciro Immobile: 74 goals
